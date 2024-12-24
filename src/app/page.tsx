@@ -1,7 +1,6 @@
 'use client';
 import Landing from './components/Landing';
 import About from './components/About';
-import { TextField } from '@mui/material';
 import ContactDetailsPair from './components/ContactDetailsPair';
 // import { RowsPhotoAlbum } from 'react-photo-album';
 // import { photos } from '@/data/galleryPhotos';
@@ -19,13 +18,29 @@ export default function Home() {
         <div id="decorative-bar" className="h-[4vh] bg-white"></div>
         <div className="flex h-[71vh] flex-col items-center">
           <h1 className="my-[6vh] text-[1.5vw]">CONTACT</h1>
-          <div className="flex gap-[16vw]">
-            <div id="contact-fields" className="flex flex-col gap-4">
+          <div className="flex gap-[12vw]">
+            <div id="contact-fields" className="flex w-[30vw] flex-col gap-4">
               <h1>ONLINE CONTACT</h1>
-              <TextField id="name" label="Name" variant="outlined" />
-              <TextField id="email" label="Email" variant="outlined" />
-              <TextField id="Phone" label="Phone" variant="outlined" />
-              <TextField id="Message" label="Message" variant="outlined" />
+              <input
+                type="text"
+                placeholder="Name"
+                className="h-[5vh] rounded-lg p-[0.5vw] text-gray-400"
+              />
+              <input
+                type="text"
+                placeholder="Email"
+                className="h-[5vh] rounded-lg p-[0.5vw] text-gray-400"
+              />
+              <input
+                type="text"
+                placeholder="Phone"
+                className="h-[5vh] rounded-lg p-[0.5vw] text-gray-400"
+              />
+              <input
+                type="text"
+                placeholder="Message"
+                className="h-[20vh] rounded-lg p-[0.5vw] text-gray-400"
+              />
             </div>
             <div className="flex flex-col gap-4">
               <h1>GET IN TOUCH</h1>
