@@ -6,6 +6,7 @@
   --background: var(--lightBrown);
   --foreground: var(--white);
   --darkBrown: #582d0a;
+  --hoverBrown: #6d4525;
   --lightBrown: #745337;
   --cream: #ebc996;
   --milk: #fff0da;
@@ -17,6 +18,10 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .debug {

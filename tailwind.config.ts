@@ -12,6 +12,7 @@ export default {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
         darkBrown: 'var(--darkBrown)',
+        hoverBrown: 'var(--hoverBrown)',
         lightBrown: 'var(--lightBrown)',
         cream: 'var(--cream)',
         milk: 'var(--milk)',

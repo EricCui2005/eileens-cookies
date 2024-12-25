@@ -24,7 +24,6 @@ export default function Contact() {
               <h1>GET IN TOUCH</h1>
               <ContactDetailsPair title="Email" content="eileencui@gmail.com" />
               <ContactDetailsPair title="Phone" content="814-308-0156" />
-              <ContactDetailsPair title="Location" content="Coming Soon" />
             </div>
           </div>
         </div>
