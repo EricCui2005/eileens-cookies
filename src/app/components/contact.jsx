@@ -1,10 +1,10 @@
-import ContactDetailsPair from './ContactDetailsPair';
-import InputField from './InputField';
+import ContactDetailsPair from './contactDetailsPair';
+import InputField from './inputField';
 
 export default function Contact() {
   return (
     <>
-      <div id="contact" className="bg-lightGray h-[75vh] text-black">
+      <div id="contact" className="h-[75vh] bg-lightGray text-black">
         <div id="decorative-bar" className="h-[4vh] bg-white"></div>
         <div className="flex h-[71vh] flex-col items-center">
           <h1 className="my-[6vh] text-[1.6vw]">CONTACT</h1>
