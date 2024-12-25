@@ -5,7 +5,7 @@ export default function Landing() {
   return (
     <>
       <div id="landing-div" className="h-[100vh] w-[100vw]">
-        <div className="bg-darkBrown flex h-[10vh] items-center justify-center">
+        <div className="flex h-[10vh] items-center justify-center bg-darkBrown">
           <div
             id="navigation-links"
             className="justify-items flex items-center gap-24 text-[1.1vw]"
@@ -18,7 +18,7 @@ export default function Landing() {
         </div>
         <div
           id="big-text-div"
-          className="bg-lightBrown flex h-[90vh] w-[100vw] items-center justify-center"
+          className="flex h-[90vh] w-[100vw] items-center justify-center bg-lightBrown"
         >
           <h1 className="text-[16vw] text-white">
             <VaraText text="Eileen's Cookies" />
