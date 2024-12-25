@@ -7,7 +7,7 @@ export default function Contact() {
       <div id="contact" className="h-[75vh] bg-lightGray text-black">
         <div id="decorative-bar" className="h-[4vh] bg-white"></div>
         <div className="flex h-[71vh] flex-col items-center">
-          <h1 className="my-[6vh] text-[1.6vw]">CONTACT</h1>
+          <h1 className="my-[6vh] text-[1.6vw] font-bold">CONTACT</h1>
           <div className="flex gap-[12vw]">
             <div id="contact-fields" className="flex w-[30vw] flex-col gap-4">
               <h1>ONLINE CONTACT</h1>

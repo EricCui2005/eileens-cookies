@@ -5,10 +5,10 @@ export default function About() {
     <>
       <div
         id="about"
-        className="bg-milk flex h-[75vh] items-center justify-center gap-[15vw] text-black"
+        className="flex h-[75vh] items-center justify-center gap-[15vw] bg-milk text-black"
       >
         <div className="flex-flex-col w-[50vw] items-center justify-center">
-          <h1 className="mb-[2vw] text-[2vw]">ABOUT US</h1>
+          <h1 className="mb-[2vw] text-[2vw] font-bold">ABOUT US</h1>
           <p className="text-[1.2vw]">
             Eileen&apos;s Cookies has been delighting the Erie community with custom, hand-crafted
             decorative cookies since 2021. Our focus is on delivering high-quality, made-to-order

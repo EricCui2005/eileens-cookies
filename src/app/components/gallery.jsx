@@ -3,8 +3,8 @@ import GalleryImage from './galleryImage';
 export default function Gallery() {
   return (
     <>
-      <div id="cookies-gallery" className="bg-cream h-[150vh] text-black">
-        <h1 className="mb-[4vh] pt-[4vh] text-center text-[1.5vw]">COOKIE GALLERY</h1>
+      <div id="cookies-gallery" className="h-[150vh] bg-cream text-black">
+        <h1 className="mb-[4vh] pt-[4vh] text-center text-[1.5vw] font-bold">COOKIE GALLERY</h1>
         <div className="flex items-center justify-center gap-[2vw]">
           <div className="flex h-[125vh] w-[25vw] flex-col gap-[4vh]">
             <GalleryImage src="/galleryPictures/tree.JPG" h={50} />
