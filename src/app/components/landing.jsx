@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import VaraText from './varaText';
 
 export default function Landing() {
   return (
@@ -19,7 +20,9 @@ export default function Landing() {
           id="big-text-div"
           className="bg-lightBrown flex h-[90vh] w-[100vw] items-center justify-center"
         >
-          <h1 className="text-[8vw]">Eileen&apos;s Cookies</h1>
+          <h1 className="text-[16vw] text-white">
+            <VaraText text="Eileen's Cookies" />
+          </h1>
         </div>
       </div>
     </>
