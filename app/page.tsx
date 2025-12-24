@@ -439,7 +439,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
-              href="mailto:hello@eileenscookies.com"
+              href="mailto:eileenscookies.erie@gmail.com"
               className="inline-flex items-center gap-3 px-8 py-4 text-sm uppercase tracking-[0.15em] font-medium transition-all duration-300 hover:scale-105"
               style={{
                 background: "var(--terracotta)",
