@@ -19,6 +19,7 @@ const cookieImages = [
   "/cookies/f0d4e0326a56c7b15278942d3eb9514b.JPG",
   "/cookies/f2df69f842fb4dd4450217114d281163.JPG",
   "/cookies/fc7dcddb99e5af6c38fea31f77062927.JPG",
+  "/cookies/hello.JPG",
 ];
 
 export default function Home() {
