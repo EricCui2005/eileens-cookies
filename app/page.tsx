@@ -227,9 +227,9 @@ export default function Home() {
                 className="font-light leading-relaxed"
                 style={{ color: "var(--charcoal-light)" }}
               >
-                Elegant favors and dessert table additions that match your
-                wedding theme. From monograms to florals, we bring your love
-                story to life.
+                Beautiful custom cookies that match your wedding theme
+                perfectly. From monograms to florals, we bring your love story
+                to life in every bite.
               </p>
             </div>
 
