@@ -9,7 +9,6 @@ const cookieImages = [
   "/cookies/366a994bb10551683ae50da0cde510d2.JPG",
   "/cookies/3dd562ca8bde3b1750efb97740732816.JPG",
   "/cookies/586653c5aab73f46521960de2a710255.JPG",
-  "/cookies/7220f0d818ff53a8ec35ecdfafb24f2f.JPG",
   "/cookies/8a0038d9d630734526888b1a4da6bd1b.JPG",
   "/cookies/948c06dfe75ff287a618c73b6fc38c7e.JPG",
   "/cookies/a1c0e4a9f6c0b6f44197563f3b58fa74.JPG",
