@@ -1,72 +1,30 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
-const galleryImages = [
-  {
-    id: 1,
-    category: "wedding",
-    placeholder: "Wedding Monogram Set",
-    color: "#e8d5d0",
-  },
-  {
-    id: 2,
-    category: "event",
-    placeholder: "Corporate Logo Cookies",
-    color: "#f5e6d3",
-  },
-  {
-    id: 3,
-    category: "baby-shower",
-    placeholder: "Baby Onesie Cookies",
-    color: "#d4e5ed",
-  },
-  {
-    id: 4,
-    category: "wedding",
-    placeholder: "Bridal Dress Cookies",
-    color: "#f0ebe5",
-  },
-  {
-    id: 5,
-    category: "event",
-    placeholder: "Holiday Collection",
-    color: "#f5d5e0",
-  },
-  {
-    id: 6,
-    category: "baby-shower",
-    placeholder: "Woodland Animals",
-    color: "#e5edd4",
-  },
-  {
-    id: 7,
-    category: "wedding",
-    placeholder: "Elegant Lace Pattern",
-    color: "#ebe5e3",
-  },
-  {
-    id: 8,
-    category: "event",
-    placeholder: "Graduation Celebration",
-    color: "#d4d8ed",
-  },
-];
-
-const categories = [
-  { id: "all", label: "All" },
-  { id: "wedding", label: "Weddings" },
-  { id: "baby-shower", label: "Baby Showers" },
-  { id: "event", label: "Special Events" },
+const cookieImages = [
+  "/cookies/146510939d3177b66be71326aa8c34f5.JPG",
+  "/cookies/14d366ce0e119348c9ad51e99bafa4b2.JPG",
+  "/cookies/366a994bb10551683ae50da0cde510d2.JPG",
+  "/cookies/3dd562ca8bde3b1750efb97740732816.JPG",
+  "/cookies/586653c5aab73f46521960de2a710255.JPG",
+  "/cookies/7220f0d818ff53a8ec35ecdfafb24f2f.JPG",
+  "/cookies/8a0038d9d630734526888b1a4da6bd1b.JPG",
+  "/cookies/948c06dfe75ff287a618c73b6fc38c7e.JPG",
+  "/cookies/a1c0e4a9f6c0b6f44197563f3b58fa74.JPG",
+  "/cookies/abd07f1588c976f4977cc8f89d68dda6.JPG",
+  "/cookies/c509d6963aacc74ca859e6641a4db58c.JPG",
+  "/cookies/dc3b0ad7cb1659775958c222ee4c438f.JPG",
+  "/cookies/ea90516d8a6be25b5ce430a18526268a.JPG",
+  "/cookies/f0d4e0326a56c7b15278942d3eb9514b.JPG",
+  "/cookies/f2df69f842fb4dd4450217114d281163.JPG",
+  "/cookies/fc7dcddb99e5af6c38fea31f77062927.JPG",
 ];
 
 export default function Home() {
-  const [activeCategory, setActiveCategory] = useState("all");
-
-  const filteredImages =
-    activeCategory === "all"
-      ? galleryImages
-      : galleryImages.filter((img) => img.category === activeCategory);
+  const [galleryExpanded, setGalleryExpanded] = useState(false);
+  const visibleImages = galleryExpanded ? cookieImages : cookieImages.slice(0, 8);
 
   return (
     <div className="min-h-screen" style={{ background: "var(--cream)" }}>
@@ -372,76 +330,86 @@ export default function Home() {
               Our Work
             </p>
             <h2
-              className="font-[family-name:var(--font-serif)] text-4xl md:text-5xl font-light mb-12"
+              className="font-[family-name:var(--font-serif)] text-4xl md:text-5xl font-light"
               style={{ color: "var(--charcoal)" }}
             >
               Cookie Gallery
             </h2>
-
-            {/* Filter buttons */}
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
-                  className="px-6 py-2 text-sm uppercase tracking-[0.15em] transition-all duration-300 cursor-pointer"
-                  style={{
-                    background:
-                      activeCategory === cat.id
-                        ? "var(--terracotta)"
-                        : "transparent",
-                    color:
-                      activeCategory === cat.id
-                        ? "var(--cream)"
-                        : "var(--charcoal-light)",
-                    border:
-                      activeCategory === cat.id
-                        ? "1px solid transparent"
-                        : "1px solid var(--terracotta)",
-                  }}
-                >
-                  {cat.label}
-                </button>
-              ))}
-            </div>
           </div>
 
           {/* Gallery grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {filteredImages.map((img, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {visibleImages.map((src, index) => (
               <div
-                key={img.id}
-                className="aspect-square relative overflow-hidden group cursor-pointer"
-                style={{
-                  background: img.color,
-                  animationDelay: `${index * 100}ms`,
-                }}
+                key={index}
+                className="aspect-square relative overflow-hidden group"
               >
-                {/* Placeholder content */}
-                <div className="absolute inset-0 flex items-center justify-center p-4">
-                  <p
-                    className="font-[family-name:var(--font-serif)] text-lg text-center opacity-60"
-                    style={{ color: "var(--charcoal)" }}
-                  >
-                    {img.placeholder}
-                  </p>
-                </div>
-
+                <Image
+                  src={src}
+                  alt={`Cookie design ${index + 1}`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                />
                 {/* Hover overlay */}
                 <div
-                  className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ background: "rgba(196, 164, 132, 0.9)" }}
-                >
-                  <p
-                    className="text-sm uppercase tracking-[0.2em] font-medium"
-                    style={{ color: "var(--cream)" }}
-                  >
-                    View
-                  </p>
-                </div>
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ background: "rgba(196, 164, 132, 0.3)" }}
+                />
               </div>
             ))}
           </div>
+
+          {/* Show More / Show Less Button */}
+          {cookieImages.length > 8 && (
+            <div className="text-center mt-12">
+              <button
+                onClick={() => setGalleryExpanded(!galleryExpanded)}
+                className="inline-flex items-center gap-2 px-8 py-3 text-sm uppercase tracking-[0.15em] font-medium transition-all duration-300 hover:scale-105 cursor-pointer"
+                style={{
+                  background: "transparent",
+                  color: "var(--charcoal)",
+                  border: "1px solid var(--terracotta)",
+                }}
+              >
+                {galleryExpanded ? (
+                  <>
+                    Show Less
+                    <svg
+                      className="w-4 h-4 transition-transform"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 15l7-7 7 7"
+                      />
+                    </svg>
+                  </>
+                ) : (
+                  <>
+                    Show More
+                    <svg
+                      className="w-4 h-4 transition-transform"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </>
+                )}
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
