@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   title: "Eileen's Cookies | Handcrafted Royal Icing Cookies",
   description:
     "Beautiful handcrafted royal icing cookies for weddings, birthdays, baby showers, and special celebrations.",
+  icons: {
+    icon: "/cookie_favicon.png",
+    apple: "/cookie_favicon.png",
+  },
 };
 
 export default function RootLayout({
