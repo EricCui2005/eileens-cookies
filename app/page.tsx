@@ -534,7 +534,7 @@ export default function Home() {
             Eileen&apos;s Cookies
           </p>
           <p className="text-sm" style={{ color: "var(--charcoal-light)" }}>
-            © {new Date().getFullYear()} All rights reserved. Made with love.
+            Made with love.
           </p>
         </div>
       </footer>
