@@ -11,8 +11,8 @@ const galleryImages = [
   },
   {
     id: 2,
-    category: "birthday",
-    placeholder: "Floral Birthday Collection",
+    category: "event",
+    placeholder: "Corporate Logo Cookies",
     color: "#f5e6d3",
   },
   {
@@ -29,8 +29,8 @@ const galleryImages = [
   },
   {
     id: 5,
-    category: "birthday",
-    placeholder: "Unicorn Party Set",
+    category: "event",
+    placeholder: "Holiday Collection",
     color: "#f5d5e0",
   },
   {
@@ -47,8 +47,8 @@ const galleryImages = [
   },
   {
     id: 8,
-    category: "birthday",
-    placeholder: "Galaxy Theme Cookies",
+    category: "event",
+    placeholder: "Graduation Celebration",
     color: "#d4d8ed",
   },
 ];
@@ -56,8 +56,8 @@ const galleryImages = [
 const categories = [
   { id: "all", label: "All" },
   { id: "wedding", label: "Weddings" },
-  { id: "birthday", label: "Birthdays" },
   { id: "baby-shower", label: "Baby Showers" },
+  { id: "event", label: "Special Events" },
 ];
 
 export default function Home() {
@@ -155,8 +155,8 @@ export default function Home() {
             style={{ color: "var(--charcoal-light)" }}
           >
             Custom royal icing cookies made with care for your most cherished
-            celebrations. From weddings to baby showers, each cookie tells your
-            story.
+            celebrations. From weddings to baby showers and every special event
+            in between, each cookie tells your story.
           </p>
           <a
             href="#gallery"
@@ -275,46 +275,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Birthday */}
-            <div
-              className="group p-10 text-center transition-all duration-500 hover:-translate-y-2"
-              style={{ background: "var(--cream-dark)" }}
-            >
-              <div
-                className="w-20 h-20 mx-auto mb-8 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110"
-                style={{ background: "var(--rose)" }}
-              >
-                <svg
-                  className="w-10 h-10"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  style={{ color: "var(--terracotta-dark)" }}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"
-                  />
-                </svg>
-              </div>
-              <h3
-                className="font-[family-name:var(--font-serif)] text-2xl mb-4"
-                style={{ color: "var(--charcoal)" }}
-              >
-                Birthdays
-              </h3>
-              <p
-                className="font-light leading-relaxed"
-                style={{ color: "var(--charcoal-light)" }}
-              >
-                Custom themed cookies for every age and interest. Whether it's a
-                first birthday or a milestone celebration, we make it
-                memorable.
-              </p>
-            </div>
-
             {/* Baby Shower */}
             <div
               className="group p-10 text-center transition-all duration-500 hover:-translate-y-2"
@@ -351,6 +311,46 @@ export default function Home() {
               >
                 Sweet treats to welcome your little one. Onesies, rattles,
                 animals, and more—all decorated with care for your special day.
+              </p>
+            </div>
+
+            {/* Special Events */}
+            <div
+              className="group p-10 text-center transition-all duration-500 hover:-translate-y-2"
+              style={{ background: "var(--cream-dark)" }}
+            >
+              <div
+                className="w-20 h-20 mx-auto mb-8 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110"
+                style={{ background: "var(--rose)" }}
+              >
+                <svg
+                  className="w-10 h-10"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  style={{ color: "var(--terracotta-dark)" }}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
+                  />
+                </svg>
+              </div>
+              <h3
+                className="font-[family-name:var(--font-serif)] text-2xl mb-4"
+                style={{ color: "var(--charcoal)" }}
+              >
+                Special Events
+              </h3>
+              <p
+                className="font-light leading-relaxed"
+                style={{ color: "var(--charcoal-light)" }}
+              >
+                Birthdays, graduations, holidays, corporate gatherings, and
+                more. Whatever the occasion, we create custom cookies to make
+                it unforgettable.
               </p>
             </div>
           </div>
